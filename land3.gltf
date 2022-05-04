@@ -9,7 +9,8 @@
             "name" : "Scene",
             "nodes" : [
                 0,
-                1
+                1,
+                2
             ]
         }
     ],
@@ -21,25 +22,45 @@
                 1.0597333908081055,
                 1.0597333908081055,
                 1.0597333908081055
+            ]
+        },
+        {
+            "name" : "tree3",
+            "rotation" : [
+                0,
+                -0.5291740298271179,
+                0,
+                0.8485133051872253
+            ],
+            "scale" : [
+                1.4218465089797974,
+                1.4218465089797974,
+                1.4218465089797974
             ],
             "translation" : [
-                2.061028003692627,
-                -1.4469658136367798,
-                2.049267292022705
+                21.044828414916992,
+                0.4538438022136688,
+                -23.891746520996094
             ]
         },
         {
             "mesh" : 1,
-            "name" : "obj3Sphere",
+            "name" : "tree3.001",
+            "rotation" : [
+                -0.5665459036827087,
+                -0.5102777481079102,
+                -0.4329959452152252,
+                0.4807877838611603
+            ],
             "scale" : [
-                1.0597333908081055,
-                1.0597333908081055,
-                1.0597333908081055
+                1.0523778200149536,
+                1.052377700805664,
+                1.0523775815963745
             ],
             "translation" : [
-                20.748092651367188,
-                1.1474963426589966,
-                -23.760604858398438
+                20.258054733276367,
+                3.985853910446167,
+                -24.55440902709961
             ]
         }
     ],
@@ -60,12 +81,26 @@
         },
         {
             "doubleSided" : true,
-            "name" : "Material",
+            "name" : "leaves",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
-                    0.15592652559280396,
-                    0.08228269219398499,
-                    0.5840786099433899,
+                    0.13013654947280884,
+                    0.15292617678642273,
+                    0.02415763959288597,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "Material.006",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.13013654947280884,
+                    0.15292617678642273,
+                    0.02415763959288597,
                     1
                 ],
                 "metallicFactor" : 0,
@@ -89,7 +124,7 @@
             ]
         },
         {
-            "name" : "Sphere.002",
+            "name" : "Icosphere.009",
             "primitives" : [
                 {
                     "attributes" : {
@@ -99,6 +134,15 @@
                     },
                     "indices" : 7,
                     "material" : 1
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 8,
+                        "NORMAL" : 9,
+                        "TEXCOORD_0" : 10
+                    },
+                    "indices" : 11,
+                    "material" : 2
                 }
             ]
         }
@@ -109,14 +153,14 @@
             "componentType" : 5126,
             "count" : 64,
             "max" : [
-                19.703407287597656,
-                2.046966075897217,
-                -22.659433364868164
+                21.64826202392578,
+                0.6815606355667114,
+                -20.725675582885742
             ],
             "min" : [
-                15.421614646911621,
-                0.9637061357498169,
-                -26.662141799926758
+                17.366470336914062,
+                -0.4016993045806885,
+                -24.728384017944336
             ],
             "type" : "VEC3"
         },
@@ -141,35 +185,69 @@
         {
             "bufferView" : 4,
             "componentType" : 5126,
-            "count" : 992,
+            "count" : 300,
             "max" : [
-                1,
-                1,
-                1.0000001192092896
+                2.079345703125,
+                0.6982052326202393,
+                0.25519201159477234
             ],
             "min" : [
-                -0.9999999403953552,
-                -1,
-                -1
+                -0.2683275043964386,
+                -0.33138108253479004,
+                -1.3798965215682983
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 5,
             "componentType" : 5126,
-            "count" : 992,
+            "count" : 300,
             "type" : "VEC3"
         },
         {
             "bufferView" : 6,
             "componentType" : 5126,
-            "count" : 992,
+            "count" : 300,
             "type" : "VEC2"
         },
         {
             "bufferView" : 7,
             "componentType" : 5123,
-            "count" : 1440,
+            "count" : 300,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 240,
+            "max" : [
+                0.7106998562812805,
+                1.0565431118011475,
+                0.6128301620483398
+            ],
+            "min" : [
+                -0.3743842840194702,
+                0.22475412487983704,
+                -0.4909666180610657
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5126,
+            "count" : 240,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 10,
+            "componentType" : 5126,
+            "count" : 240,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 11,
+            "componentType" : 5123,
+            "count" : 240,
             "type" : "SCALAR"
         }
     ],
@@ -196,28 +274,48 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 11904,
+            "byteLength" : 3600,
             "byteOffset" : 2216
         },
         {
             "buffer" : 0,
-            "byteLength" : 11904,
-            "byteOffset" : 14120
+            "byteLength" : 3600,
+            "byteOffset" : 5816
         },
         {
             "buffer" : 0,
-            "byteLength" : 7936,
-            "byteOffset" : 26024
+            "byteLength" : 2400,
+            "byteOffset" : 9416
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 600,
+            "byteOffset" : 11816
         },
         {
             "buffer" : 0,
             "byteLength" : 2880,
-            "byteOffset" : 33960
+            "byteOffset" : 12416
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2880,
+            "byteOffset" : 15296
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1920,
+            "byteOffset" : 18176
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 480,
+            "byteOffset" : 20096
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 36840,
+            "byteLength" : 20576,
             "uri" : "land3.bin"
         }
     ]
